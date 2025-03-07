@@ -5,7 +5,7 @@ setup(
     version="0.0.1",
     author="Abhishek Bhardwaj",
     author_email="abshkbh@gmail.com",
-    description="A placeholder package to reserve the py-arrakis name",
+    description="SDK (wip) for https://github.com/abshkbh/arrakis",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/abshkbh/py-arrakis",
