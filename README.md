@@ -1,10 +1,10 @@
 # py-arrakis
 
-This is a placeholder package to reserve the name `py-arrakis` on PyPI.
+Python SDK for [Arrakis](https://github.com/abshkbh/arrakis).
 
 ## Description
 
-This package is currently a work in progress. The full implementation will be coming soon.
+This package provides a Python SDK over the REST API exposed by [Arrakis](https://github.com/abshkbh/arrakis).
 
 ## Installation
 
