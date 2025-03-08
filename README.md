@@ -39,12 +39,7 @@ snapshot_id = new_vm.take_snapshot("my-snapshot")
 new_vm.destroy()
 ```
 
-For more examples, check out the [cookbook.py](examples/cookbook.py) file which demonstrates:
-
-- Basic VM operations
-- VM lifecycle management
-- Working with snapshots
-- Setting up port forwarding
+For more examples, check out the [cookbook.py](examples/cookbook.py) file.
 
 ## License
 
