@@ -14,10 +14,6 @@ from py_arrakis import SandboxManager
 # Set the base URL for the Arrakis REST server
 BASE_URL = "http://localhost:7000"
 
-# TODO: Remove this after the boot up synchronization is implemented.
-VM_START_WAIT_TIME_SECONDS = 3
-
-
 def basic_usage_example():
     """Basic usage example showing core functionality."""
     print("=== Basic Usage Example ===")
@@ -36,10 +32,6 @@ def basic_usage_example():
         print("Starting a new VM...")
         new_sandbox = sandbox_manager.start_sandbox("example-vm")
         print(f"Started VM: {new_sandbox.name}")
-
-        # Wait a moment for the VM to initialize
-        print("Waiting for VM to initialize...")
-        time.sleep(VM_START_WAIT_TIME_SECONDS)
     else:
         # Use the first VM if any exist
         new_sandbox = sandboxes[0]
@@ -55,10 +47,6 @@ def vm_management_example():
     print("Starting a new VM...")
     sandbox = sandbox_manager.start_sandbox("lifecycle-example")
     print(f"Started VM: {sandbox.name}")
-
-    # Give the VM time to start up
-    print("Waiting for VM to initialize...")
-    time.sleep(VM_START_WAIT_TIME_SECONDS)
 
     # Get VM details
     print("Getting VM details:")
@@ -91,10 +79,6 @@ def snapshot_example():
     # Start a test VM
     print("Starting a test VM for snapshots...")
     sandbox = sandbox_manager.start_sandbox(sandbox_name)
-
-    # Wait for the VM to initialize
-    print("Waiting for VM to initialize...")
-    time.sleep(VM_START_WAIT_TIME_SECONDS)
 
     # Run a command to modify the VM state before snapshot
     print("Modifying VM state before snapshot...")
@@ -150,10 +134,6 @@ def context_manager_example():
     # The __exit__ method on Sandbox will automatically destroy the VM
     with sandbox_manager.start_sandbox("auto-cleanup-example") as sandbox:
         print(f"Started VM: {sandbox.name}")
-
-        # Wait for the VM to initialize
-        print("Waiting for VM to initialize...")
-        time.sleep(VM_START_WAIT_TIME_SECONDS)
 
         # Run some commands in the VM
         print("Running commands in the VM...")
