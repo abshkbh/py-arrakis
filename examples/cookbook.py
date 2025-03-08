@@ -62,7 +62,7 @@ def vm_management_example():
 
     # Get VM details
     print("Getting VM details:")
-    details = sandbox.list()
+    details = sandbox.info()
     print(f"  Status: {details.get('status')}")
     print(f"  IP: {details.get('ip')}")
     print(f"  Tap Device: {details.get('tap_device_name')}")

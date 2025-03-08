@@ -2,8 +2,6 @@
 Sandbox module for managing VM instances.
 """
 
-from __future__ import annotations
-
 import datetime
 
 from .client import APIClient
@@ -16,7 +14,7 @@ class Sandbox:
         self._api = api_client
         self.name = name
 
-    def list(self) -> dict:
+    def info(self) -> dict[str, any]:
         """Get details of this sandbox VM.
 
         Returns:
