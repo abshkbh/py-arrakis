@@ -2,6 +2,8 @@
 Sandbox module for managing VM instances.
 """
 
+from __future__ import annotations
+
 import datetime
 
 from .client import APIClient
@@ -112,7 +114,7 @@ class Sandbox:
             "error": response.get("error", ""),
         }
 
-    def upload_files(self, files: List[Dict[str, str]]) -> None:
+    def upload_files(self, files: list[dict[str, str]]) -> None:
         """Upload files to the VM.
 
         Args:
@@ -125,7 +127,7 @@ class Sandbox:
         """
         self._api.post(f"/vms/{self.name}/files", {"files": files})
 
-    def download_files(self, paths: List[str]) -> List[Dict[str, str]]:
+    def download_files(self, paths: list[str]) -> list[dict[str, str]]:
         """Download files from the VM.
 
         Args:

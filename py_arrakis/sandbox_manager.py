@@ -2,6 +2,8 @@
 Manager module for handling multiple sandbox VM instances.
 """
 
+from __future__ import annotations
+
 from .client import APIClient
 from .sandbox import Sandbox
 

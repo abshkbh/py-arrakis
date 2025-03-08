@@ -2,6 +2,8 @@
 REST API client module for interacting with Arrakis server.
 """
 
+from __future__ import annotations
+
 import requests
 
 
