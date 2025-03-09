@@ -29,7 +29,7 @@ class SandboxManager:
         response = self._api.get("/vms")
         return [Sandbox(self._api, vm.get("vmName")) for vm in response.get("vms", [])]
 
-    def delete_all(self) -> None:
+    def destroy_all(self) -> None:
         """Delete all sandbox VMs.
 
         Raises:
