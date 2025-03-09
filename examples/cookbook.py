@@ -7,7 +7,6 @@ It provides practical examples of how to use the library to interact with Arraki
 sandbox VMs through the REST API.
 """
 
-import time
 import requests
 from py_arrakis import SandboxManager
 
