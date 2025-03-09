@@ -23,20 +23,23 @@ from py_arrakis import SandboxManager
 manager = SandboxManager("http://localhost:8080")
 
 # List all VMs
-vms = manager.list_all()
+sandboxes = manager.list_all()
 
 # Start a new VM
-new_vm = manager.start_sandbox("my-vm")
+sandbox = manager.start_sandbox("my-sandbox")
 
 # Run a command in the VM
-result = new_vm.run_cmd("echo hello world")
+result = sandbox.run_cmd("echo hello world")
 print(result["output"])
 
 # Create a snapshot
-snapshot_id = new_vm.take_snapshot("my-snapshot")
+snapshot_id = sandbox.snapshot("snapshot-v1")
 
 # Destroy the VM when done
-new_vm.destroy()
+sandbox.destroy()
+
+# Restore from snapshot
+restored_sandbox = manager.restore("my-vm", snapshot_id)
 ```
 
 For more examples, check out the [cookbook.py](examples/cookbook.py) file.
