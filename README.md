@@ -20,7 +20,7 @@ The SDK provides a simple interface to manage Arrakis sandbox VMs:
 from py_arrakis import SandboxManager
 
 # Initialize the sandbox manager with the Arrakis server URL
-manager = SandboxManager("http://localhost:8080")
+manager = SandboxManager("http://localhost:7000")
 
 # List all VMs
 sandboxes = manager.list_all()
