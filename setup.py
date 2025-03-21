@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="py-arrakis",
-    version="1.1.2",
+    version="1.2.2",
     author="Abhishek Bhardwaj",
     author_email="abshkbh@gmail.com",
     description="Python SDK for the Arrakis sandboxes - https://github.com/abshkbh/arrakis",
