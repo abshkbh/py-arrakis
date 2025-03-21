@@ -94,7 +94,7 @@ class Sandbox:
         )
         return response.get("snapshotId", snapshot_id)
 
-    def run_cmd(self, cmd: str) -> dict[str, str]:
+    def run_cmd(self, cmd: str, blocking: bool = True) -> dict[str, str]:
         """Execute a command in the VM.
 
         Args:
@@ -106,7 +106,7 @@ class Sandbox:
         Raises:
             Exception: If the API request fails.
         """
-        response = self._api.post(f"/vms/{self.name}/cmd", {"cmd": cmd})
+        response = self._api.post(f"/vms/{self.name}/cmd", {"cmd": cmd, "blocking": blocking})
         return {
             "output": response.get("output", ""),
             "error": response.get("error", ""),
